@@ -17,5 +17,15 @@ class IntegerNet_AlternativeTaxConfiguration_Model_Observer
      */
     public function controllerActionPredispatch(Varien_Event_Observer $observer)
     {
+        $currentCustomerGroupId = Mage::getSingleton('customer/session')->getCustomerGroupId();
+        if (!in_array($currentCustomerGroupId, explode(',', Mage::getStoreConfig('alternative_tax/groups/type')))) {
+            return;
+        }
+        
+        foreach(Mage::helper('integernet_alternativetaxconfiguration')->getConfigPaths() as $configPath) {
+
+            $value = Mage::getStoreConfig('alternative_tax/' . $configPath);
+            Mage::app()->getConfig()->setNode('stores/' . Mage::app()->getStore()->getCode() . '/tax/' . $configPath, $value);
+        }
     }
 }
