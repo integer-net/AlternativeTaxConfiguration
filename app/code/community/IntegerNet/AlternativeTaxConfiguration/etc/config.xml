@@ -28,6 +28,14 @@
                 <class>IntegerNet_AlternativeTaxConfiguration_Model</class>
             </integernet_alternativetaxconfiguration>
         </models>
+
+        <resources>
+            <integernet_alternativetaxconfiguration_setup>
+                <setup>
+                    <module>IntegerNet_AlternativeTaxConfiguration</module>
+                </setup>
+            </integernet_alternativetaxconfiguration_setup>
+        </resources>
     </global>
     <frontend>
         <events>
@@ -42,4 +50,16 @@
             </controller_action_predispatch>
         </events>
     </frontend>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <integernet_alternativetaxconfiguration>
+                    <files>
+                        <default>IntegerNet_AlternativeTaxConfiguration.csv</default>
+                    </files>
+                </integernet_alternativetaxconfiguration>
+            </modules>
+        </translate>
+    </adminhtml>
 </config>

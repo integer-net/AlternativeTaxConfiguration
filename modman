@@ -1,2 +1,3 @@
 app/code/community/IntegerNet/AlternativeTaxConfiguration	                            app/code/community/IntegerNet/AlternativeTaxConfiguration
 app/etc/modules/IntegerNet_AlternativeTaxConfiguration.xml	                            app/etc/modules/IntegerNet_AlternativeTaxConfiguration.xml
+app/locale/de_DE/IntegerNet_AlternativeTaxConfiguration.csv	                            app/locale/de_DE/IntegerNet_AlternativeTaxConfiguration.csv
