@@ -1,0 +1,9 @@
+{
+   "name": "integer-net/alternative-tax-configuration",
+   "type": "magento-module",
+   "description": "Provide shipping costs in Magento Cart, plus the ability to change the country there",
+   "homepage": "https://github.com/integer-net/AlternativeTaxConfiguration",
+   "require": {
+      "magento-hackathon/magento-composer-installer": "*"
+   }
+}

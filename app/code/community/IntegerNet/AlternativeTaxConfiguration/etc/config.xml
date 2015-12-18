@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * integer_net lternativeTaxConfiguration Module
+ *
+ * @category   IntegerNet
+ * @package    IntegerNet_AlternativeTaxConfiguration
+ * @copyright  Copyright (c) 2015 integer_net GmbH (http://www.integer-net.de/)
+ * @license    http://opensource.org/licenses/gpl-3.0 GNU General Public License, version 3 (GPLv3)
+ * @author     Andreas von Studnitz <avs@integer-net.de>
+ */
+ -->
+<config>
+    <modules>
+        <IntegerNet_AlternativeTaxConfiguration>
+            <version>0.1.0</version>
+        </IntegerNet_AlternativeTaxConfiguration>
+    </modules>
+    <global>
+        <helpers>
+            <integernet_alternativetaxconfiguration>
+                <class>IntegerNet_AlternativeTaxConfiguration_Helper</class>
+            </integernet_alternativetaxconfiguration>
+        </helpers>
+
+        <models>
+            <integernet_alternativetaxconfiguration>
+                <class>IntegerNet_AlternativeTaxConfiguration_Model</class>
+            </integernet_alternativetaxconfiguration>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <integernet_alternativetaxconfiguration>
+                        <type>singleton</type>
+                        <class>integernet_alternativetaxconfiguration/observer</class>
+                        <method>controllerActionPredispatch</method>
+                    </integernet_alternativetaxconfiguration>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+</config>
