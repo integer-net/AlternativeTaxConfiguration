@@ -26,6 +26,7 @@ class IntegerNet_AlternativeTaxConfiguration_Helper_Data extends Mage_Core_Helpe
             'sales_display/grandtotal',
             'sales_display/full_summary',
             'sales_display/zero_tax',
+            'baseprice/base_price_incl_tax',
         );
     }
 }

@@ -25,7 +25,11 @@ class IntegerNet_AlternativeTaxConfiguration_Model_Observer
         foreach(Mage::helper('integernet_alternativetaxconfiguration')->getConfigPaths() as $configPath) {
 
             $value = Mage::getStoreConfig('alternative_tax/' . $configPath);
-            Mage::app()->getConfig()->setNode('stores/' . Mage::app()->getStore()->getCode() . '/tax/' . $configPath, $value);
+            if (strpos($configPath, 'baseprice/') === 0) {
+                Mage::app()->getConfig()->setNode('stores/' . Mage::app()->getStore()->getCode() . '/catalog/' . $configPath, $value);
+            } else {
+                Mage::app()->getConfig()->setNode('stores/' . Mage::app()->getStore()->getCode() . '/tax/' . $configPath, $value);
+            }
         }
     }
 }
